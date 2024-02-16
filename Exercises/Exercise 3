@@ -1,0 +1,29 @@
+# Exercise 3: Print characters from a string that are present at an even index number
+# Write a program to accept a string from the user and display characters that are present at an even index number.
+# For example, str = "pynative" so you should display ‘p’, ‘n’, ‘t’, ‘v’.
+
+# Get the string from user
+str = input("Type in a word: ")
+print("Original word is", str)
+print("Printing only even index numbers")
+
+# Store word as int for range function
+# start: Start at index 0
+# stop: use whole word
+# step: incrementing in 2's
+
+# Store the word as an integer using len(str)
+str_length = len(str)
+for i in range(0, str_length, 2):
+    # Print the index and its corresponding letter
+    print("Index:", i, "Letter:", str[i])
+
+# Same exercise but with List Slicing method
+print("Now with list slicing")
+print("Original word is", str)
+print("Printing only even index numbers")
+# Store the word as a list
+str_list = str
+# List slicing, initial index: 0, end index:none, indexjumps:2
+for x in str_list[0::2]:
+    print("Letter:",x)

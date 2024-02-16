@@ -1,0 +1,10 @@
+# Exercise 6: Display numbers divisible by 5 from a list
+# Iterate the given list of numbers and print only those numbers which are divisible by 5
+
+list = [10, 20, 33, 45, 55]
+print("These numbers are divisible by 5")
+
+# This uses the modulo operator % to determine if an index is divisible by 5, if there is no remainder, its divisible by 5.
+for x in list:
+    if x %5 == 0:
+        print(x)
