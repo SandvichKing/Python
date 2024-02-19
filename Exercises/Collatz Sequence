@@ -1,14 +1,19 @@
+# This function performs the Collatz Sequence calculations 
 def collatz(number):
+        if number % 2 == 0:
+            print(number // 2)
+            return number // 2
+        elif number % 2 == 1:
+            result = 3 * number + 1
+            print(result)
+            return result
 
-    if number % 2 == 0:
-        print(number // 2)
-        return number // 2
-
-    elif number % 2 == 1:
-        result = 3 * number + 1
-        print(result)
-        return result
-
-n = input("Give me a number: ")
-while n != 1:
-    n = collatz(int(n))
+# This function gets the number from user
+def number_get():
+    try:
+        n = input("Give me a number: ")
+        while n != 1:
+            n = collatz(int(n)) # repeats collatz() until number reaches 1
+    except:
+     print("Invalid Value: Please enter a number")
+number_get()
